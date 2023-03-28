@@ -22,14 +22,15 @@ public class RidesParser {
       double tripDistance = Double.parseDouble(line.get(4));
       double totalAmount = Double.parseDouble(line.get(5));
 
-      newRide =
-          new Ride(
-              taxiId,
-              pickUpTime,
-              dropOffTime,
-              passengerCount,
-              tripDistance,
-              totalAmount);
+      RideBuilder rideBuilder = new RideBuilder();
+      rideBuilder.setTaxiId(taxiId);
+      rideBuilder.setPickUpTime(pickUpTime);
+      rideBuilder.setDropOffTime(dropOffTime);
+      rideBuilder.setPassengerCount(passengerCount);
+      rideBuilder.setTripDistance(tripDistance);
+      rideBuilder.setTollsAmount(totalAmount);
+      newRide = rideBuilder.build();
+
 
     } catch (Exception e) { }
 

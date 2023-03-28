@@ -2,7 +2,7 @@ package com.grid.financial;
 
 import java.util.Date;
 
-public class Ride {
+public class Ride{
   //Attributes
   private String error;
   private long taxiId;
@@ -31,6 +31,7 @@ public class Ride {
     this.tripDistance = tripDistance;
     this.tollsAmount = tollsAmount;
   }
+
 
   //Accessible methods "getters and setters"
   public String getError() {
