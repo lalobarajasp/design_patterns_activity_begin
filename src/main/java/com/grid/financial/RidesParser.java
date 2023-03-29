@@ -7,13 +7,13 @@ import java.util.List;
 public class RidesParser {
 
   static final String DATE_FORMAT = "yyyy-MM-dd hh:mm:ss";
-  //Parse form List?
+
   public static Ride parseFromList(List<String> line) {
 
 
     Ride newRide = null;
 
-    //Why will this throw an exception?
+
     try {
       long taxiId = Long.parseLong(line.get(0));
       Date pickUpTime = new SimpleDateFormat(DATE_FORMAT).parse(line.get(1));
@@ -22,6 +22,7 @@ public class RidesParser {
       double tripDistance = Double.parseDouble(line.get(4));
       double totalAmount = Double.parseDouble(line.get(5));
 
+      //Updated by Builder Method
       RideBuilder rideBuilder = new RideBuilder();
       rideBuilder.setTaxiId(taxiId);
       rideBuilder.setPickUpTime(pickUpTime);
@@ -32,7 +33,9 @@ public class RidesParser {
       newRide = rideBuilder.build();
 
 
-    } catch (Exception e) { }
+    } catch (Exception e) {
+      System.out.println(e.toString());
+    }
 
     return newRide;
   }

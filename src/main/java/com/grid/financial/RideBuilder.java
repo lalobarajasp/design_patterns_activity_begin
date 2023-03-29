@@ -1,7 +1,9 @@
 package com.grid.financial;
 
-import java.util.Date;
+import com.grid.financial.service.Builder;
 
+import java.util.Date;
+//Class created by Builder Method
 public class RideBuilder implements Builder {
     private long taxiId;
     private Date pickUpTime;
@@ -9,8 +11,6 @@ public class RideBuilder implements Builder {
     private int passengerCount;
     private double tripDistance;
     private double tollsAmount;
-
-
 
 
     @Override

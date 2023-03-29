@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
-
+//Client created by Factory Method
 public class Client {
 
     private static final String CSV_FILENAME = "taxi-data.csv";
@@ -29,9 +29,15 @@ public class Client {
             }
         }
 
-        WebReport webReport = new WebReport();
-        String htmlReport = webReport.createContent(result);
+        Report report = SimpleReportFactory.createReport("web", result);
+        report.run();
+        Report report1 = SimpleReportFactory.createReport("text",result);
+        report1.run();
+
+//        CreateReport createReport = new CreateReport();
+//        String txtReport = createReport.createContent(result);
+//        webReport.createFile(txtReport);
         // System.out.println(htmlReport);
-        webReport.createFile(htmlReport);
+
     }
 }

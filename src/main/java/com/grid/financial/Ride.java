@@ -1,7 +1,7 @@
 package com.grid.financial;
 
 import java.util.Date;
-
+//Factory created by Factory Method
 public class Ride{
   //Attributes
   private String error;
