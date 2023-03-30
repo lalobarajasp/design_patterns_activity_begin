@@ -1,7 +1,7 @@
 package com.grid.financial;
 
 import java.util.List;
-
+//Method Factory
 public class SimpleReportFactory {
     public static Report createReport(String criteria, List<Ride> rides){
 

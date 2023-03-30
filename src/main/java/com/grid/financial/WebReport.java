@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+//Method Factory
 public class WebReport extends Report {
 
     @Override
