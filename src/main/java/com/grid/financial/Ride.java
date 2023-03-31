@@ -32,7 +32,6 @@ public class Ride{
     this.tollsAmount = tollsAmount;
   }
 
-
   //Accessible methods "getters and setters"
   public String getError() {
     return error;
